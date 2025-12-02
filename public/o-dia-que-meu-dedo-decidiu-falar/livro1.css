@@ -187,3 +187,17 @@ body {
         font-size: 11px;
     }
 }
+
+
+/* === FIX Android que cria espaço no rodapé (A52, A32, etc) === */
+@media screen and (max-height: 800px) {
+    body {
+        min-height: 100dvh !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    main, .container {
+        flex: 1 0 auto !important;
+    }
+}
