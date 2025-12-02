@@ -1,0 +1,197 @@
+/* ===== Fonte personalizada ===== */
+@font-face {
+    font-family: 'Motter Corpus';
+    src: url('../../fonts/motter-corpus-itc-tt.ttf') format('truetype');
+}
+
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== GARANTIR QUE A TELA TENHA 100% DA ALTURA ===== */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+main {
+    flex: 1;
+}
+
+
+
+
+/* ===== CABEÇALHO ===== */
+.topo-site {
+    width: 100%;
+    background-color: #083B6D;
+    padding: 15px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+/* logo */
+.logo-topo {
+    height: 36px;
+    width: auto;
+}
+
+/* MOBILE — ícone hambúrguer */
+.menu-btn {
+    background-color: #5CC8FF;
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.menu-icone {
+    width: 26px;
+    height: 26px;
+}
+
+/* DESKTOP MENU */
+.menu-desktop {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.menu-desktop .item-menu {
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    text-decoration: none;
+}
+
+.menu-desktop .icon {
+    width: 18px;
+    height: 18px;
+}
+
+/* Botão laranja de contato */
+.btn-contato {
+    background-color: #FFA844;
+    padding: 9px 14px;
+    border-radius: 8px;
+
+    color: white;
+    font-weight: 600;
+    font-size: 13px;
+
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+
+
+
+
+/* ===== BODY FLEX PARA FIXAR RODAPÉ NO FINAL ===== */
+body {
+    background-color: #FEFFF5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+    min-height: 100vh;
+}
+
+
+
+/* ===== CONTAINER DO CONTEÚDO ===== */
+.container {
+    width: 100%;
+    max-width: 390px;
+    padding: 20px;
+    text-align: center;
+
+    flex: 1; /* Mantém conteúdo flexível e empurra o rodapé */
+}
+
+/* ===== RODAPÉ 100% WIDTH ===== */
+.rodape {
+    width: 100%;
+    background-color: #E6E6E6;
+    padding: 25px 0;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    flex-shrink: 0; /* NÃO deixa o rodapé ser encolhido */
+}
+
+.rodape p {
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.logo-rodape {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    display: block;
+}
+
+/* ===== MEDIA QUERY (ATÉ 600px) ===== */
+@media (max-width: 600px) {
+
+    .rodape {
+        padding: 18px 0;
+    }
+
+    .rodape p {
+        font-size: 11px;
+    }
+}
+
+/* === FIX Android que cria espaço no rodapé (A52, A32, etc) === */
+@media screen and (max-height: 800px) {
+    body {
+        min-height: 100dvh !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    main, .container {
+        flex: 1 0 auto !important;
+    }
+}
+
+
+/* MOBILE */
+.mobile-only { display: block; }
+.desktop-only { display: none; }
+
+/* DESKTOP */
+@media (min-width: 768px) {
+    .mobile-only { display: none; }
+    .desktop-only { display: flex; }
+}
