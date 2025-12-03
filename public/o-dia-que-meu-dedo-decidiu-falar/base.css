@@ -331,6 +331,137 @@ body {
 
 
 
+
+
+
+
+/* ============================
+   ÁREA DO PLAYER DE ÁUDIO (BASE)
+   ============================ */
+
+/* Card do áudio */
+.audio-card {
+    width: 100%;
+    max-width: 360px;
+    background: white;
+    padding: 25px 20px;
+    border-radius: 18px;
+    border: 2px solid rgba(0,0,0,0.15);
+    margin: 40px auto 20px;
+}
+
+/* Área com player + avançar/voltar */
+.audio-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    margin-bottom: 20px;
+}
+
+/* Botão Play/Pause (CORRIGIDO) */
+.audio-play {
+    background: #FFA844;
+    border: none;
+    border-radius: 50%;
+    width: 95px;
+    height: 95px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    position: relative; /* Essencial para sobrepor ícones */
+}
+
+/* Ícones sobrepostos */
+.audio-play img {
+    width: 55px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* Ícones não capturam clique */
+}
+
+/* Pause começa oculto */
+#pauseIcon {
+    display: none;
+}
+
+/* Botões Avançar / Voltar */
+.audio-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    cursor: pointer;
+}
+
+.audio-nav img {
+    width: 30px;
+    opacity: 0.9;
+}
+
+.audio-nav span {
+    font-size: 13px;
+    color: #D7D7D7;
+    font-family: "Quicksand", sans-serif;
+}
+
+/* Waveform */
+.audio-wave-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+#audio-wave-container span {
+    font-size: 14px;
+}
+
+#waveform {
+    width: 100%;
+    height: 60px;
+    margin: 0 10px;
+}
+
+/* Ajuda */
+.audio-help {
+    margin-top: 18px;
+    text-align: center;
+}
+
+.audio-help p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.3;
+    color: #8F8F8F;
+}
+
+#entre-contato {
+    color: black;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ===== CONTAINER DO CONTEÚDO ===== */
 .container {
     width: 100%;

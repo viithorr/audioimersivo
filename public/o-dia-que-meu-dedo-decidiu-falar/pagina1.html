@@ -94,8 +94,9 @@
 
 
 
-  
 
+ <!-- ===== CONTEÚDO ===== -->
+  
     <main class="container">
 
         <!-- Título -->
@@ -107,11 +108,60 @@
         </div>
 
         
-           
 
+        <!-- ===== SEÇÃO DO ÁUDIO ===== -->
+<section class="audio-card">
+
+    <!-- Botões centrais -->
+    <div class="audio-center">
+        <!-- Botão Voltar (só aparece da página 2 pra frente — escondido na página 1) -->
+        <div class="audio-nav left" id="btnVoltar">
+            <img src="img/voltar.svg" alt="Voltar">
+            <span>Voltar</span>
+        </div>
+
+    
+        <!-- Play / Pause -->
+         <button class="audio-play" id="btnPlayPause">
+            <img id="playIcon" src="img/player.svg" alt="Play">
+            <img id="pauseIcon" src="img/pause.svg" alt="Pause" style="display:none;">
+         </button>
+
+      
+
+  
+
+
+
+        <!-- Botão Avançar -->
+        <div class="audio-nav right" id="btnAvancar">
+            <img src="img/avancar.svg" alt="Avançar">
+            <span>Avançar</span>
+        </div>
+    </div>
+
+    <!-- Waveform (Wavesurfer entra aqui depois) -->
+    <div class="audio-wave-container">
+        <span id="currentTime">0:00</span>
+
+        <div id="waveform"></div>
+
+        <span id="totalTime">0:00</span>
+    </div>
+
+
+</section>
+
+ <!-- Ajuda -->
+    <div class="audio-help">
+        <p>Problemas com o áudio?<br>
+        <a href="#" id="entre-contato">Entre em contato aqui</a></p>
+    </div>
         
     </main>
 
+
+   
 
 
 
@@ -124,7 +174,20 @@
         
     </footer>
 
+
+
+
+
+
+ <!-- Js Geral -->
 <script src="base.js"></script>
+
+<!-- Wavesurfer -->
+<script src="https://unpkg.com/wavesurfer.js"></script>
+
+<!-- Script do áudio -->
+<script src="audio1.js"></script>
+
 
 </body>
 </html>

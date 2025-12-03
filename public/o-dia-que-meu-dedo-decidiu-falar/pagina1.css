@@ -17,3 +17,10 @@
 .player-box {
     margin-top: 10px;
 }
+
+
+/* Esconder o botão "Voltar" na página 1 */
+#btnVoltar {
+    opacity: 0;
+    pointer-events: none;
+}
