@@ -110,6 +110,215 @@ main {
 
 
 
+
+
+
+/* ===== BASE GLOBAL (fonts, reset, layout) ===== */
+
+@font-face {
+    font-family: 'Motter Corpus';
+    src: url('../../fonts/motter-corpus-itc-tt.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #FEFFF5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+}
+
+main {
+    width: 100%;
+    max-width: 390px;
+    padding: 20px;
+    flex: 1;
+}
+
+/* ===== TÍTULO DO LIVRO ===== */
+.titulo-livro {
+    width: 85%;
+    max-width: 320px;
+    display: block;
+    margin: 30px auto 20px;
+}
+
+/* ===== INDICADOR DE PÁGINA ===== */
+.pagina-indicador {
+    background-color: #0C572A;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 20px;
+    width: fit-content;
+    margin: 0 auto 25px;
+}
+
+
+/* ===== ÁREA DE AJUDA ===== */
+.area-ajuda p {
+    font-size: 12px;
+    color: #8F8F8F;
+}
+
+#entre-contato {
+    font-size: 12px;
+    color: black;
+    text-decoration: underline;
+}
+
+/* ===== RODAPÉ ===== */
+.rodape {
+    width: 100%;
+    background-color: #E6E6E6;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.rodape p {
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.logo-rodape {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===== FIX Android (A52 / A32 / Moto G) ===== */
+@media screen and (max-height: 800px) {
+    body {
+        min-height: 100dvh;
+    }
+}
+
+
+
+
+
+
+
+
+/* ===== MENU MOBILE (painel lateral) — ABRINDO PELA DIREITA ===== */
+.menu-mobile {
+    position: fixed;
+    top: 0;
+    right: -80%;            /* antes era left:-80% */
+    width: 80%;
+    height: 100vh;
+    background-color: #083B6D;
+    z-index: 9999;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: right 0.35s ease-in-out;  /* antes era left */
+    padding: 35px 25px;
+}
+
+.menu-mobile.open {
+    right: 0;               /* antes era left:0 */
+}
+
+/* Conteúdo */
+.menu-mobile-content {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* Logo */
+.menu-mobile-logo {
+    width: 170px;
+    margin-bottom: 20px;
+}
+
+/* Itens */
+.menu-mobile-item {
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+.menu-mobile-item .icon {
+    width: 20px;
+}
+
+/* Linha divisória */
+.menu-line {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255,255,255,0.25);
+    margin: px 0;
+}
+
+/* Botão */
+.menu-btn-contato {
+    background-color: #FFA844;
+    padding: 12px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+
+    margin-top: 15px;
+}
+
+/* Fundo escuro para fechar menu */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.45);
+
+    display: none;
+    z-index: 9998;
+}
+
+.overlay.show {
+    display: block;
+}
+
+/* Desktop não mostra menu mobile */
+@media (min-width: 768px) {
+    .menu-mobile,
+    .overlay {
+        display: none !important;
+    }
+}
+
+
+
+
+
+
+
+
 /* ===== BODY FLEX PARA FIXAR RODAPÉ NO FINAL ===== */
 body {
     background-color: #FEFFF5;
