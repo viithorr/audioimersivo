@@ -1,32 +1,56 @@
-/* ===== Fonte personalizada ===== */
+/* ============================================================================
+   1. FONTES E RESET GLOBAL
+   ============================================================================ */
+
+/* Fonte personalizada */
 @font-face {
     font-family: 'Motter Corpus';
     src: url('../../fonts/motter-corpus-itc-tt.ttf') format('truetype');
 }
 
-/* ===== RESET ===== */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ===== GARANTIR QUE A TELA TENHA 100% DA ALTURA ===== */
 html, body {
-    margin: 0;
-    padding: 0;
     height: 100%;
 }
 
+/* ============================================================================
+   2. LAYOUT GLOBAL
+   ============================================================================ */
+
+body {
+    background-color: #FEFFF5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+    min-height: 100vh;
+}
 
 main {
+    width: 100%;
+    max-width: 390px;
+    padding: 20px;
+    flex: 1; /* empurra rodapé para baixo */
+}
+
+.container {
+    width: 100%;
+    max-width: 390px;
+    padding: 20px;
+    text-align: center;
     flex: 1;
 }
 
+/* ============================================================================
+   3. CABEÇALHO (TOP BAR)
+   ============================================================================ */
 
-
-
-/* ===== CABEÇALHO ===== */
 .topo-site {
     width: 100%;
     background-color: #083B6D;
@@ -39,13 +63,12 @@ main {
     flex-shrink: 0;
 }
 
-/* logo */
 .logo-topo {
     height: 36px;
     width: auto;
 }
 
-/* MOBILE — ícone hambúrguer */
+/* Botão mobile (hambúrguer) */
 .menu-btn {
     background-color: #5CC8FF;
     border: none;
@@ -56,7 +79,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-
     cursor: pointer;
 }
 
@@ -65,7 +87,10 @@ main {
     height: 26px;
 }
 
-/* DESKTOP MENU */
+/* ============================================================================
+   4. MENU DESKTOP
+   ============================================================================ */
+
 .menu-desktop {
     display: flex;
     align-items: center;
@@ -89,7 +114,7 @@ main {
     height: 18px;
 }
 
-/* Botão laranja de contato */
+/* Botão de contato (laranja) */
 .btn-contato {
     background-color: #FFA844;
     padding: 9px 14px;
@@ -98,7 +123,6 @@ main {
     color: white;
     font-weight: 600;
     font-size: 13px;
-
     text-decoration: none;
 
     display: flex;
@@ -106,116 +130,14 @@ main {
     gap: 6px;
 }
 
+/* ============================================================================
+   5. MENU MOBILE (LATERAL DIREITA)
+   ============================================================================ */
 
-
-
-
-
-
-
-/* ===== BASE GLOBAL (fonts, reset, layout) ===== */
-
-@font-face {
-    font-family: 'Motter Corpus';
-    src: url('../../fonts/motter-corpus-itc-tt.ttf') format('truetype');
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html, body {
-    height: 100%;
-}
-
-body {
-    background-color: #FEFFF5;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: 'Quicksand', sans-serif;
-}
-
-main {
-    width: 100%;
-    max-width: 390px;
-    padding: 20px;
-    flex: 1;
-}
-
-/* ===== TÍTULO DO LIVRO ===== */
-.titulo-livro {
-    width: 85%;
-    max-width: 320px;
-    display: block;
-    margin: 30px auto 20px;
-}
-
-/* ===== INDICADOR DE PÁGINA ===== */
-.pagina-indicador {
-    background-color: #0C572A;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 30px;
-    font-weight: 700;
-    font-size: 20px;
-    width: fit-content;
-    margin: 0 auto 25px;
-}
-
-
-/* ===== ÁREA DE AJUDA ===== */
-.area-ajuda p {
-    font-size: 12px;
-    color: #8F8F8F;
-}
-
-#entre-contato {
-    font-size: 12px;
-    color: black;
-    text-decoration: underline;
-}
-
-/* ===== RODAPÉ ===== */
-.rodape {
-    width: 100%;
-    background-color: #E6E6E6;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.rodape p {
-    font-size: 12px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.logo-rodape {
-    max-width: 100%;
-    height: auto;
-}
-
-/* ===== FIX Android (A52 / A32 / Moto G) ===== */
-@media screen and (max-height: 800px) {
-    body {
-        min-height: 100dvh;
-    }
-}
-
-
-
-
-
-
-
-
-/* ===== MENU MOBILE (painel lateral) — ABRINDO PELA DIREITA ===== */
 .menu-mobile {
     position: fixed;
     top: 0;
-    right: -80%;            /* antes era left:-80% */
+    right: -80%;
     width: 80%;
     height: 100vh;
     background-color: #083B6D;
@@ -223,36 +145,35 @@ main {
 
     display: flex;
     flex-direction: column;
-
-    transition: right 0.35s ease-in-out;  /* antes era left */
     padding: 35px 25px;
+
+    transition: right 0.35s ease-in-out;
 }
 
 .menu-mobile.open {
-    right: 0;               /* antes era left:0 */
+    right: 0;
 }
 
-/* Conteúdo */
 .menu-mobile-content {
     display: flex;
     flex-direction: column;
     gap: 22px;
 }
 
-/* Logo */
 .menu-mobile-logo {
     width: 170px;
     margin-bottom: 20px;
 }
 
-/* Itens */
 .menu-mobile-item {
     color: white;
     font-size: 15px;
     font-weight: 500;
+
     display: flex;
     align-items: center;
     gap: 10px;
+
     text-decoration: none;
     padding: 10px 0;
 }
@@ -266,15 +187,12 @@ main {
     width: 100%;
     height: 1px;
     background-color: rgba(255,255,255,0.25);
-    margin: px 0;
 }
 
-/* Botão */
 .menu-btn-contato {
     background-color: #FFA844;
     padding: 12px 18px;
     border-radius: 10px;
-    text-decoration: none;
 
     display: flex;
     align-items: center;
@@ -283,11 +201,9 @@ main {
     color: white;
     font-size: 14px;
     font-weight: 600;
-
-    margin-top: 15px;
 }
 
-/* Fundo escuro para fechar menu */
+/* Overlay */
 .overlay {
     position: fixed;
     top: 0;
@@ -295,7 +211,6 @@ main {
     width: 100vw;
     height: 100vh;
     background: rgba(0,0,0,0.45);
-
     display: none;
     z-index: 9998;
 }
@@ -304,43 +219,25 @@ main {
     display: block;
 }
 
-/* Desktop não mostra menu mobile */
-@media (min-width: 768px) {
-    .menu-mobile,
-    .overlay {
-        display: none !important;
-    }
+/* ============================================================================
+   6. INDICADOR DE PÁGINA
+   ============================================================================ */
+
+.pagina-indicador {
+    background-color: #0C572A;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 20px;
+    width: fit-content;
+    margin: 0 auto 25px;
 }
 
+/* ============================================================================
+   7. PLAYER DE ÁUDIO (COMPARTILHADO ENTRE TODAS AS PÁGINAS)
+   ============================================================================ */
 
-
-
-
-
-
-
-/* ===== BODY FLEX PARA FIXAR RODAPÉ NO FINAL ===== */
-body {
-    background-color: #FEFFF5;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: 'Quicksand', sans-serif;
-    min-height: 100vh;
-}
-
-
-
-
-
-
-
-
-/* ============================
-   ÁREA DO PLAYER DE ÁUDIO (BASE)
-   ============================ */
-
-/* Card do áudio */
 .audio-card {
     width: 100%;
     max-width: 360px;
@@ -351,7 +248,7 @@ body {
     margin: 40px auto 20px;
 }
 
-/* Área com player + avançar/voltar */
+/* Área central com player + avançar/voltar */
 .audio-center {
     display: flex;
     justify-content: center;
@@ -360,48 +257,37 @@ body {
     margin-bottom: 20px;
 }
 
-
-
-/* Botão Play/Pause */
+/* Botão Play/Pause circular */
 .audio-play {
     background: none;
     border: none;
     padding: 0;
-    margin: 0;
-
-    width: 110px;  /* tamanho botão */
+    width: 110px;
     height: 110px;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    cursor: pointer;
     position: relative;
+    cursor: pointer;
 }
 
-/* Ícones Play e Pause SOBREPOSTOS */
+/* Ícones sobrepostos */
 .audio-play img {
-    width: 110px;  /* MESMO TAMANHO PARA AMBOS */
+    width: 110px;
     height: 110px;
     object-fit: contain;
 
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
+    inset: 0;
+    margin: auto;
     pointer-events: none;
 }
 
-/* Pause começa escondido */
-#pauseIcon {
-    display: none;
-}
+#pauseIcon { display: none; }
 
-
-
-/* Botões Avançar / Voltar */
+/* Avançar / Voltar */
 .audio-nav {
     display: flex;
     flex-direction: column;
@@ -418,7 +304,6 @@ body {
 .audio-nav span {
     font-size: 13px;
     color: #D7D7D7;
-    font-family: "Quicksand", sans-serif;
 }
 
 /* Waveform */
@@ -429,72 +314,30 @@ body {
     margin-top: 15px;
 }
 
-#audio-wave-container span {
-    font-size: 14px;
-}
-
 #waveform {
     width: 100%;
     height: 60px;
     margin: 0 10px;
 }
 
+/* ============================================================================
+   8. ÁREA DE AJUDA
+   ============================================================================ */
 
-
-
-
-
-
-/* ============================
-   ÁREA AJUDA
-   ============================ */
-
-
-/* Ajuda */
 .audio-help {
     margin-top: 18px;
     text-align: center;
 }
 
 .audio-help p {
-    margin: 0;
     font-size: 12px;
-    line-height: 1.3;
     color: #8F8F8F;
 }
 
-#entre-contato {
-    color: black;
-    font-weight: 600;
-}
+/* ============================================================================
+   9. RODAPÉ
+   ============================================================================ */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ===== CONTAINER DO CONTEÚDO ===== */
-.container {
-    width: 100%;
-    max-width: 390px;
-    padding: 20px;
-    text-align: center;
-
-    flex: 1; /* Mantém conteúdo flexível e empurra o rodapé */
-}
-
-/* ===== RODAPÉ 100% WIDTH ===== */
 .rodape {
     width: 100%;
     background-color: #E6E6E6;
@@ -506,7 +349,7 @@ body {
     flex-direction: column;
     align-items: center;
 
-    flex-shrink: 0; /* NÃO deixa o rodapé ser encolhido */
+    flex-shrink: 0;
 }
 
 .rodape p {
@@ -516,15 +359,23 @@ body {
 }
 
 .logo-rodape {
-    width: auto;
-    height: auto;
     max-width: 100%;
-    display: block;
+    height: auto;
 }
 
-/* ===== MEDIA QUERY (ATÉ 600px) ===== */
-@media (max-width: 600px) {
+/* ============================================================================
+   10. RESPONSIVIDADE (MOBILE/TABLET)
+   ============================================================================ */
 
+.mobile-only { display: block; }
+.desktop-only { display: none; }
+
+@media (min-width: 768px) {
+    .mobile-only { display: none; }
+    .desktop-only { display: flex; }
+}
+
+@media (max-width: 600px) {
     .rodape {
         padding: 18px 0;
     }
@@ -534,26 +385,9 @@ body {
     }
 }
 
-/* === FIX Android que cria espaço no rodapé (A52, A32, etc) === */
+/* Fix Android A52/A32/Moto G */
 @media screen and (max-height: 800px) {
     body {
         min-height: 100dvh !important;
-        display: flex !important;
-        flex-direction: column !important;
     }
-
-    main, .container {
-        flex: 1 0 auto !important;
-    }
-}
-
-
-/* MOBILE */
-.mobile-only { display: block; }
-.desktop-only { display: none; }
-
-/* DESKTOP */
-@media (min-width: 768px) {
-    .mobile-only { display: none; }
-    .desktop-only { display: flex; }
 }

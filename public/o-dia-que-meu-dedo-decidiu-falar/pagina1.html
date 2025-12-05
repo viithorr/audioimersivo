@@ -4,13 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title> Página 1 - O dia que meu dedo decidiu falar</title>
+    <title>Página 1 - O dia que meu dedo decidiu falar</title>
 
-    <!-- CSS do livro -->
+    <!-- ================================
+         CSS ESPECÍFICO DA PÁGINA
+         ================================= -->
     <link rel="stylesheet" href="pagina1.css">
+
+    <!-- ================================
+         CSS GLOBAL (compartilhado)
+         ================================= -->
     <link rel="stylesheet" href="base.css">
 
-    <!-- Fonte Quicksand -->
+    <!-- ================================
+         Fontes Google
+         ================================= -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
@@ -19,188 +27,187 @@
 
 <body>
 
-   <header class="topo-site">
-
-    <!-- Logo -->
-    <img src="img/logo-branca.svg" alt="Logo Lorena Jacob" class="logo-topo">
-
-
-
-    <!-- MENU MOBILE (hambúrguer) -->
-    <button class="menu-btn mobile-only">
-        <img src="img/menu.svg" alt="Menu" class="menu-icone">
-    </button>
-
-
-
-    <!-- MENU DESKTOP -->
-    <nav class="menu-desktop desktop-only">
-        <a href="#" class="item-menu">
-            <img src="img/icon-livro.svg" class="icon"> COLEÇÃO
-        </a>
-        <a href="#" class="item-menu">
-            <img src="img/icon-loja.svg" class="icon"> LOJA
-        </a>
-        <a href="#" class="item-menu">
-            <img src="img/icon-site.svg" class="icon"> SITE
-        </a>
-
-        <a href="#" class="btn-contato">
-            <img src="img/icon-whatsapp.svg" class="icon">
-            ENTRE EM CONTATO
-        </a>
-    </nav>
-
-</header>
-
-
-
-
-<!-- MENU MOBILE LATERAL -->
-<div class="menu-mobile" id="menuMobile">
-
-    <div class="menu-mobile-content">
+    <!-- ============================================================
+         CABEÇALHO DO SITE (Desktop + Mobile)
+         ============================================================ -->
+    <header class="topo-site">
 
         <!-- Logo -->
-        <img src="img/logo-branca.svg" alt="Logo" class="menu-mobile-logo">
+        <img src="img/logo-branca.svg" alt="Logo Lorena Jacob" class="logo-topo">
 
-        <!-- Itens -->
-        <a href="#" class="menu-mobile-item">
-            <img src="img/icon-livro.svg" class="icon"> COLEÇÃO
-        </a>
+        <!-- Botão hamburguer — apenas mobile -->
+        <button class="menu-btn mobile-only">
+            <img src="img/menu.svg" alt="Menu" class="menu-icone">
+        </button>
 
-         <!-- Linha -->
-        <div class="menu-line"></div>
+        <!-- Menu Desktop -->
+        <nav class="menu-desktop desktop-only">
+            <a href="#" class="item-menu">
+                <img src="img/icon-livro.svg" class="icon"> COLEÇÃO
+            </a>
 
-        <a href="https://www.lorenajacob.com.br/shop" class="menu-mobile-item">
-            <img src="img/icon-loja.svg" class="icon"> LOJA
-        </a>
+            <a href="https://www.lorenajacob.com.br/shop" class="item-menu">
+                <img src="img/icon-loja.svg" class="icon"> LOJA
+            </a>
 
-          <!-- Linha -->
-        <div class="menu-line"></div>
+            <a href="https://www.lorenajacob.com.br/" class="item-menu">
+                <img src="img/icon-site.svg" class="icon"> SITE
+            </a>
 
-        <a href="https://www.lorenajacob.com.br/" class="menu-mobile-item">
-            <img src="img/icon-site.svg" class="icon"> SITE
-        </a>
-       
+            <a href="https://api.whatsapp.com/send/?phone=5527998206121" class="btn-contato">
+                <img src="img/icon-whatsapp.svg" class="icon">
+                ENTRE EM CONTATO
+            </a>
+        </nav>
+    </header>
 
-        <!-- Botão -->
-        <a href="#" class="menu-btn-contato">
-            <img src="img/icon-whatsapp.svg" class="icon">
-            ENTRE EM CONTATO
-        </a>
 
+
+    <!-- ============================================================
+         MENU MOBILE (LATERAL DIREITO)
+         ============================================================ -->
+    <div class="menu-mobile" id="menuMobile">
+
+        <div class="menu-mobile-content">
+
+            <!-- Logo -->
+            <img src="img/logo-branca.svg" alt="Logo" class="menu-mobile-logo">
+
+            <!-- Itens do menu -->
+            <a href="#" class="menu-mobile-item">
+                <img src="img/icon-livro.svg" class="icon"> COLEÇÃO
+            </a>
+
+            <div class="menu-line"></div>
+
+            <a href="https://www.lorenajacob.com.br/shop" class="menu-mobile-item">
+                <img src="img/icon-loja.svg" class="icon"> LOJA
+            </a>
+
+            <div class="menu-line"></div>
+
+            <a href="https://www.lorenajacob.com.br/" class="menu-mobile-item">
+                <img src="img/icon-site.svg" class="icon"> SITE
+            </a>
+
+            <!-- Botão WhatsApp -->
+            <a href="https://api.whatsapp.com/send/?phone=5527998206121" class="menu-btn-contato">
+                <img src="img/icon-whatsapp.svg" class="icon">
+                ENTRE EM CONTATO
+            </a>
+
+        </div>
     </div>
-</div>
 
-<!-- FUNDO ESCURO PARA FECHAR O MENU -->
-<div id="overlay" class="overlay"></div>
-
+    <!-- Fundo escuro para fechar o menu -->
+    <div id="overlay" class="overlay"></div>
 
 
 
 
-
-
- <!-- ===== CONTEÚDO ===== -->
-  
+    <!-- ============================================================
+         CONTEÚDO PRINCIPAL
+         ============================================================ -->
     <main class="container">
 
-        <!-- Título -->
+        <!-- Título do livro -->
         <img src="img/titulo.svg" class="titulo" alt="Título do Livro">
 
-        <!-- PÁGINA -->
+
+        <!-- Indicador da página -->
         <div class="pagina-indicador">
             PÁGINA 01
         </div>
 
 
-        
 
-        
-<!-- ===== SEÇÃO DO ÁUDIO ===== -->
-<section class="audio-card">
+        <!-- ======================================================
+             SEÇÃO DE ÁUDIO
+             ====================================================== -->
+        <section class="audio-card">
 
-    <!-- Botões centrais -->
-    <div class="audio-center">
+            <!-- CONTROLES DO ÁUDIO (voltar, play/pause, avançar) -->
+            <div class="audio-center">
 
-        <!-- Botão Voltar (só aparece da página 2 pra frente — escondido na página 1) -->
-        <div class="audio-nav left" id="btnVoltar">
-            <img src="img/voltar.svg" alt="Voltar">
-            <span>Voltar</span>
+                <!-- Botão Voltar (desativado na página 1) -->
+                <div class="audio-nav left" id="btnVoltar">
+                    <img src="img/voltar.svg" alt="Voltar">
+                    <span>Voltar</span>
+                </div>
+
+
+                <!-- Botão Play/Pause -->
+                <button class="audio-play" id="btnPlayPause">
+                    <img id="playIcon" src="img/player.svg" alt="Play">
+                    <img id="pauseIcon" src="img/pause.svg" style="display:none;" alt="Pause">
+                </button>
+
+
+                <!-- Botão Avançar -->
+                <div class="audio-nav right" id="btnAvancar">
+                    <img src="img/avancar.svg" alt="Avançar">
+                    <span>Avançar</span>
+                </div>
+
+            </div>
+
+
+            <!-- Waveform (Wavesurfer renderiza aqui) -->
+            <div class="audio-wave-container">
+                <span id="currentTime">0:00</span>
+
+                <div id="waveform"></div>
+
+                <span id="totalTime">0:00</span>
+            </div>
+
+        </section>
+
+
+
+
+        <!-- ======================================================
+             SEÇÃO DE AJUDA
+             ====================================================== -->
+        <div class="audio-help">
+            <p>
+                Problemas com o áudio?<br>
+                <a href="#" id="entre-contato">Entre em contato aqui</a>
+            </p>
         </div>
 
-
-
-   <!-- Botões Play / Pause -->
-<button class="audio-play" id="btnPlayPause">
-    <img id="playIcon" src="img/player.svg" alt="Play">
-    <img id="pauseIcon" src="img/pause.svg" style="display: none;" alt="Pause">
-</button>
-
-
-
-        <!-- Botão Avançar -->
-        <div class="audio-nav right" id="btnAvancar">
-            <img src="img/avancar.svg" alt="Avançar">
-            <span>Avançar</span>
-        </div>
-    </div>
-
-    <!-- Waveform (Wavesurfer entra aqui depois) -->
-    <div class="audio-wave-container">
-        <span id="currentTime">0:00</span>
-
-        <div id="waveform"></div>
-
-        <span id="totalTime">0:00</span>
-    </div>
-
-
-</section>
-
-
-        
-
-
-
- <!-- Seção  Ajuda -->
-    <div class="audio-help">
-        <p>Problemas com o áudio?<br>
-        <a href="#" id="entre-contato">Entre em contato aqui</a></p>
-    </div>
-        
     </main>
 
 
-   
 
 
-
-
- <!--  Rodapé -->
-     <footer class="rodape">
+    <!-- ============================================================
+         RODAPÉ
+         ============================================================ -->
+    <footer class="rodape">
         <p>©2025 Lorena Jacob • Todos os Direitos Reservados</p>
 
-        <a href="https://www.lorenajacob.com.br/"> <img src="img/logo.svg" class="logo-rodape" alt="Logo Lorena Jacob"> </a>
-        
+        <a href="https://www.lorenajacob.com.br/">
+            <img src="img/logo.svg" class="logo-rodape" alt="Logo Lorena Jacob">
+        </a>
     </footer>
 
 
 
 
- <!-- Js Geral -->
-<script src="base.js"></script>
+    <!-- ============================================================
+         SCRIPTS
+         ============================================================ -->
 
-<!-- Wavesurfer -->
-<script src="https://unpkg.com/wavesurfer.js"></script>
+    <!-- JS Global (menu, comportamento geral...) -->
+    <script src="base.js"></script>
 
-<!-- Script do áudio -->
-<script src="audio1.js"></script>
+    <!-- Biblioteca Wavesurfer -->
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+
+    <!-- Script do áudio somente desta página -->
+    <script src="audio1.js"></script>
 
 
 </body>
 </html>
-
-
-

@@ -1,26 +1,14 @@
+/* ============================================================================
+   PÁGINA 1 — ESTILOS EXCLUSIVOS
+   ============================================================================ */
 
-
-
-/* ===== PAGINA 1 — ajustes específicos ===== */
-
-/* Página 1 NÃO tem botão voltar */
-.controle-voltar {
-    display: none;
-}
-
-/* Empurrar o ícone "avançar" mais para a direita */
-.controle-avancar {
-    margin-left: 10px;
-}
-
-/* Ajuste fino do espaçamento do player */
-.player-box {
-    margin-top: 10px;
-}
-
-
-/* Esconder o botão "Voltar" na página 1 */
+/* Esta página NÃO tem botão "Voltar" */
 #btnVoltar {
-    opacity: 0;
-    pointer-events: none;
+    opacity: 0;        /* invisível */
+    pointer-events: none; /* não clica */
+}
+
+/* Opcional: ajustar pequenas diferenças de layout específicas da página 1 */
+.pagina1-ajuste {
+    margin: 0px;
 }
