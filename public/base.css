@@ -321,18 +321,29 @@ main {
 }
 
 /* ============================================================================
-   8. ÁREA DE AJUDA
+   8. ÁREA DE AJUDA (Usada em todas as páginas)
    ============================================================================ */
 
-.audio-help {
-    margin-top: 18px;
+.area-ajuda {
+    padding: 30px 0;
     text-align: center;
 }
 
-.audio-help p {
+.area-ajuda p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
     font-size: 12px;
     color: #8F8F8F;
 }
+
+#entre-contato {
+    color: black;
+    font-size: 12px;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
 
 /* ============================================================================
    9. RODAPÉ
