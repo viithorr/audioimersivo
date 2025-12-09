@@ -44,6 +44,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+       // === Avança para a Página 2 ===
+
+    document.getElementById("btnAvancar").addEventListener("click", () => {
+    window.location.href = "pagina2.html";
+});
+
+
+
 
 
     // === Quando o áudio estiver pronto ===
