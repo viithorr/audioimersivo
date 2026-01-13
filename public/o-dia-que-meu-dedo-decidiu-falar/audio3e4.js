@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // === Carrega o áudio da página ===
-    wavesurfer.load("audios/pagina02.mp3");
+    wavesurfer.load("audios/pagina03e04.mp3");
 
 
 
@@ -47,11 +47,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // === Navegação entre páginas ===
 document.getElementById("btnVoltar").addEventListener("click", () => {
-    window.location.href = "pagina1.html";
+    window.location.href = "pagina2.html";
 });
 
 document.getElementById("btnAvancar").addEventListener("click", () => {
-    window.location.href = "pagina3e4.html"; 
+    window.location.href = "pagina5.html"; 
 });
 
 
