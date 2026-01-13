@@ -51,7 +51,7 @@ document.getElementById("btnVoltar").addEventListener("click", () => {
 });
 
 document.getElementById("btnAvancar").addEventListener("click", () => {
-    window.location.href = "pagina1tml"; 
+    window.location.href = "pagina19(final).html"; 
 });
 
 
