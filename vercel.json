@@ -1,0 +1,5 @@
+{
+  "routes": [
+    { "src": "/o-dia-que-meu-dente-quase-fugiu/(.*)", "dest": "/o-dia-que-o-meu-dente-quase-fugiu/$1", "status": 301 }
+  ]
+}
